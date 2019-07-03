@@ -4,4 +4,5 @@ from .models import *
 # Create your views here.
 
 def index(request):
-    return render(request, 'taobao/index.html')
+    shops = Shop.objects.all()
+    return render(request, 'taobao/index.html', {'shops':shops})

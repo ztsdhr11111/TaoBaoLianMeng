@@ -5,6 +5,14 @@
 </head>
 <body>
     <div>
-        
+        <table>
+            {% for shop in shops %}
+            <tr>
+                <td>{{ shop.name }}</td><td>{{ shop.price }}￥</td>
+            </tr>
+            {% empty %}
+            <p>暂无商品</p>
+            {% endfor %}
+        </table>
     </div>
 </body>
